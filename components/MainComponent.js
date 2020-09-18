@@ -114,6 +114,25 @@ const AboutNavigator = createStackNavigator({
     }
 });
 
+const ReservationNavigator = createStackNavigator({
+  Reservation: 
+  { screen: Reservation,
+    navigationOptions: ({ navigation }) => ({
+      headerLeft: () => (<Icon name="menu" size={24} 
+                color= 'white'
+                onPress={ () => navigation.toggleDrawer() } />),
+      headerStyle: {
+          backgroundColor: "#512DA8"
+      },
+      headerTitleStyle: {
+          color: "#fff"            
+      },
+      headerTintColor: "#fff"   
+    })
+  }
+});
+
+
 const CustomDrawerContentComponent = (props) => (
   <ScrollView>
     <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
@@ -130,22 +149,6 @@ const CustomDrawerContentComponent = (props) => (
   </ScrollView>
 );
 
-const ReservationNavigator = createStackNavigator({
-  Reservation: { screen: Reservation }
-}, {
-  navigationOptions: ({ navigation }) => ({
-    headerStyle: {
-        backgroundColor: "#512DA8"
-    },
-    headerTitleStyle: {
-        color: "#fff"            
-    },
-    headerTintColor: "#fff",
-    headerLeft: <Icon name="menu" size={24}
-      iconStyle={{ color: 'white' }} 
-      onPress={ () => navigation.navigate('DrawerToggle') } />    
-  })
-})
 
 
 ///---------------Drawer Navigator-------------------
@@ -216,7 +219,7 @@ const MainNavigator = createDrawerNavigator({
       navigationOptions: {
         title: 'Reserve Table',
         drawerLabel: 'Reserve Table',
-        drawerIcon: ({ tintColor, focused }) => (
+        drawerIcon: ({ tintColor }) => (
           <Icon
             name='cutlery'
             type='font-awesome'            
