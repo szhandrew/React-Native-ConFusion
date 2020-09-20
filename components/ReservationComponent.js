@@ -31,7 +31,7 @@ class Reservation extends Component {
             '\nSmoking? ' + this.state.smoking +
             '\nDate and Time: ' + Moment(this.state.date).format('DD-MMM-YYYY h:mm A'),
             [
-            {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+            {text: 'Cancel', onPress: () => {console.log('Cancel Pressed'); this.resetForm();}, style: 'cancel'},
             {text: 'OK', onPress: () => {this.resetForm(); console.log(JSON.stringify(this.state));}},
             ],
             { cancelable: false }
