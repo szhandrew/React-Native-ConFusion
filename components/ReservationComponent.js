@@ -6,6 +6,7 @@ import Moment from 'moment';
 import * as Animatable from 'react-native-animatable';
 import * as Permissions from 'expo-permissions';
 import { Notifications } from 'expo';
+import * as Calendar from 'expo-calendar';
 
 class Reservation extends Component {
 
@@ -25,8 +26,60 @@ class Reservation extends Component {
         title: 'Reserve Table',
     };
 
+    obtainCalenderPermission = async () => {
+        let permission = await Permissions.getAsync(Permissions.CALENDAR)
 
-    confirmReservation(){
+        if ( permission.status !== 'granted' ){
+            permission = await Permissions.askAsync(Permissions.CALENDAR)
+            if ( permission.status !== 'granted' ){
+                Alert.alert("Permission not granted")
+            }
+        }
+        return permission
+    }
+
+    getDefaultCalendarSource = async () => {
+        const calendars = await Calendar.getCalendarsAsync()
+        const defaultCalendars = calendars.filter(each => each.source.name === 'Default')
+        return defaultCalendars[0].source
+    }
+
+    handleReservationToCalendar = async ( date ) => {
+        await this.obtainCalenderPermission()
+
+
+        const defaultCalendarSource =
+            Platform.OS === 'ios'
+                ? await getDefaultCalendarSource()
+                : { isLocalAccount: true, name: 'Expo Calendar' };
+
+        const tempDate = Date.parse(date)
+        const startDate = new Date(tempDate)
+        const endDate = new Date(tempDate + 2 * 60 * 60 * 1000)
+
+        const newCalendarID = await Calendar.createCalendarAsync({
+            title: 'Expo Calendar',
+            color: 'blue',
+            entityType: Calendar.EntityTypes.EVENT,
+            sourceId: defaultCalendarSource.id,
+            source: defaultCalendarSource,
+            name: 'internalCalendarName',
+            ownerAccount: 'personal',
+            accessLevel: Calendar.CalendarAccessLevel.OWNER,
+        });
+
+        await Calendar.createEventAsync(newCalendarID, {
+            title: 'Con Fusion Table Reservation',
+            startDate: startDate,
+            endDate: endDate,
+            timeZone: 'Asia/Hong_Kong',
+            location: '121, Clear Water Bay Road, Clear Water Bay, Kowloon, Hong Kong'
+        })
+
+        alert('Reservation detail has been added to your Calendar')
+    }
+
+    handleReservation(){
         Alert.alert(
             'Your Reservation OK?',
             'Number of Guests: ' + this.state.guests +
@@ -34,7 +87,13 @@ class Reservation extends Component {
             '\nDate and Time: ' + Moment(this.state.date).format('DD-MMM-YYYY h:mm A'),
             [
             {text: 'Cancel', onPress: () => {console.log('Cancel Pressed'); this.resetForm();}, style: 'cancel'},
-            {text: 'OK', onPress: () => {this.presentLocalNotification(this.state.date); this.resetForm(); console.log(JSON.stringify(this.state));}},
+            {text: 'OK', onPress: () => {
+                this.presentLocalNotification(this.state.date);
+                this.handleReservationToCalendar(this.state.date);
+                console.log(JSON.stringify(this.state));
+                this.resetForm(); 
+                }
+            },
             ],
             { cancelable: false }
         );
@@ -145,7 +204,7 @@ class Reservation extends Component {
                 </View>
                 <View style={styles.formRow}>
                 <Button
-                    onPress={() => this.confirmReservation()}
+                    onPress={() => this.handleReservation()}
                     title="Reserve"
                     color="#512DA8"
                     accessibilityLabel="Learn more about this purple button"

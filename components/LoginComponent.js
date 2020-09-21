@@ -153,6 +153,24 @@ class RegisterTab extends Component {
 
     }
 
+    getImageFromGallery = async () => {
+        const cameraRollPermission = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+
+        if (cameraRollPermission.status === 'granted') {
+            let chooseImage = await ImagePicker.launchImageLibraryAsync({
+                allowsEditing: true,
+                aspect: [4, 3],
+            });
+            if (!chooseImage.cancelled) {
+                console.log(chooseImage);
+                this.processImage(chooseImage.uri);
+            }
+        }
+        else if(cameraRollPermission.status !== 'granted'){
+            alert('Sorry, we need camera roll permissions to make this work!');
+        }
+    }
+
     processImage = async (imageUri) => {
         let processedImage = await ImageManipulator.manipulateAsync(
             imageUri, 
@@ -195,10 +213,19 @@ class RegisterTab extends Component {
                         loadingIndicatorSource={require('./images/logo.png')}
                         style={styles.image} 
                         />
-                    <Button
-                        title="Camera"
-                        onPress={this.getImageFromCamera}
-                        />
+                    <View style={styles.imageButton}>
+                        <Button
+                            title="Camera"
+                            onPress={this.getImageFromCamera}
+                            />
+                    </View>
+                    <View style={styles.imageButton}>
+                        <Button
+                            title="Gallery"
+                            onPress={this.getImageFromGallery}
+                            />
+                    </View>
+                    
                 </View>
                 <Input
                     placeholder="Username"
@@ -300,6 +327,9 @@ const styles = StyleSheet.create({
     },
     formButton: {
         margin: 20
+    },
+    imageButton:{
+        margin: 15,
     }
 });
 
