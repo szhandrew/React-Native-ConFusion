@@ -4,9 +4,9 @@
 <!-- TOC -->
 
 - [Ristorante con Fusion]
-    - [📚 Introduction](#introduction)
-    - [🔨 Installation](#installation)
-    - [🗺 Features](#features)
+    - [📚 Introduction](#Introduction)
+    - [🔨 Installation](#Installation)
+    - [🗺 Features](#Features)
     - [What's New?](#whats-new)
     - [Question](#question)
     - [License](#license)
