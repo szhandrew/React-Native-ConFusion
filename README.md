@@ -31,7 +31,7 @@ yarn install
 
 - Menus
 <img src="/screenshots/menu.png" width="320" height="640">
-<img src="/screenshots/dishDetail" width="320" height="640">
+<img src="/screenshots/dishDetail.png" width="320" height="640">
 
 - Dish detail
     - Ingredents
