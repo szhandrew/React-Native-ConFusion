@@ -49,7 +49,7 @@ yarn install
     
     
 - Reserve a table
-    - Select # of people, time and smoking options
+    - Select the number of people, time and smoking options
     
     ![](/screenshots/reservation.gif)
     
