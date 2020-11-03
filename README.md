@@ -34,4 +34,9 @@ yarn install
     - Ingredents
     - Comments
     - Write an comments
-    - Add favorite and Share on media
+    - Add favorite and Share on social media
+    - Gesture support
+- Reserve a table
+- Register/Login
+- Contact Us
+- About Us
