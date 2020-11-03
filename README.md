@@ -35,6 +35,8 @@ yarn install
     - Write an comments
     - Add favorite and Share on social media
     - Gesture support
+        - left swipe to add dish to favorite list
+        - right swipe to start writing a comment
     
     ![](/screenshots/Favorite.gif)
     ![](/screenshots/comment.gif)
