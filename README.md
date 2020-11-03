@@ -4,7 +4,7 @@
 <!-- TOC -->
 
 - [Markdown Navigation](#markdown-navigation)
-    - [Features](#features)
+    - [📚 Introduction](#Introduction)
     - [Installation](#installation)
     - [Usage](#usage)
     - [What's New?](#whats-new)
@@ -14,9 +14,9 @@
 
 <!-- /TOC -->
 
-## Features
-Auto generate markdown navigation panel to the activity bar.
-
+## 📚 Introduction
+React Native IOS/Android app designed for Ristorante ConFusion Restaurant
+Start exploring the Restaurant from the app, reading our history, cheking the menu, making reservation before you come & more...
 ![screenshot](./resources/screenshot.png)
 
 ## Installation
