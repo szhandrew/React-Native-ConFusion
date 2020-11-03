@@ -7,10 +7,6 @@
     - [📚 Introduction](#-introduction)
     - [🔨 Installation](#-installation)
     - [🗺 Features](#-features)
-    - [What's New?](#whats-new)
-    - [Question](#question)
-    - [License](#license)
-    - [Links](#links)
 
 <!-- /TOC -->
 
