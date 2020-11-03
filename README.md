@@ -31,7 +31,8 @@ yarn install
 
 - Menus
 
-<img src="/screenshots/menu.png" width="320" height="640"> <img src="/screenshots/dishDetail.png" width="320" height="640">
+    <img src="/screenshots/menu.png" width="320" height="640"> <img src="/screenshots/dishDetail.png" width="320" height="640">
+
 
 - Dish detail
     - Ingredents
@@ -43,9 +44,11 @@ yarn install
     ![](/screenshots/Favorite.gif)
     ![](/screenshots/comment.gif)
     ![](/screenshots/writecomment.gif)
+    
+    
 - Reserve a table
 
-![](/screenshots/reservation.gif)
+    ![](/screenshots/reservation.gif)
 - Register/Login
 - Contact Us
 - About Us
