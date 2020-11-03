@@ -39,6 +39,8 @@ yarn install
     - Write an comments
     - Add favorite and Share on social media
     - Gesture support
+    <img src="/screenshots/menu.png" width="320" height="640">
+    <img src="/screenshots/menu.png" width="320" height="640">
 - Reserve a table
 - Register/Login
 - Contact Us
