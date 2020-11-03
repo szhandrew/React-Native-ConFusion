@@ -30,7 +30,7 @@ yarn install
 ## 🗺 Features
 
 - Menus
-![](/screenshots/menu.png=250x250)
+![](/screenshots/menu.png){:height="50%" width="50%"}
 
 - Dish detail
     - Ingredents
