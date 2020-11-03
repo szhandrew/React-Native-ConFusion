@@ -30,6 +30,8 @@ yarn install
 ## 🗺 Features
 
 - Menus
+![](/screenshots/menu.png)
+
 - Dish detail
     - Ingredents
     - Comments
