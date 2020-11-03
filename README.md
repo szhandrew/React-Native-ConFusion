@@ -3,10 +3,10 @@
 
 <!-- TOC -->
 
-- [Markdown Navigation](#markdown-navigation)
-    - [📚 Introduction](#Introduction)
+- [Ristorante con Fusion]
+    - [📚 Introduction](#introduction)
     - [🔨 Installation](#installation)
-    - [Usage](#usage)
+    - [🗺 Features](#features)
     - [What's New?](#whats-new)
     - [Question](#question)
     - [License](#license)
@@ -15,6 +15,7 @@
 <!-- /TOC -->
 
 ## 📚 Introduction
+
 React Native IOS/Android app designed for Ristorante ConFusion Restaurant
 
 Start exploring the restaurant from the app, reading our history, checking the menu, making a reservation before you come & more...
@@ -26,4 +27,6 @@ Start exploring the restaurant from the app, reading our history, checking the m
 yarn install
 ```
 
+## 🗺 Features
 
+- Menus
