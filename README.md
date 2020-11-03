@@ -31,12 +31,17 @@ yarn install
 
 - Dish detail
     - Ingredents
+        - See every dish's ingredents
     - Comments
+        - Check other people's comments or share your comment for the dish
     - Write an comments
+        - Write a comment with rate star(1-5)
     - Add favorite and Share on social media
+        - Click "favorite" icon to add the dish to your favorite list
+        - Click "arrow" icon to share this dish on social media
     - Gesture support
-        - left swipe to add dish to favorite list
-        - right swipe to start writing a comment
+        - Left swipe to add dish to favorite list
+        - Right swipe to start writing a comment
     
     ![](/screenshots/Favorite.gif)
     ![](/screenshots/comment.gif)
@@ -44,8 +49,13 @@ yarn install
     
     
 - Reserve a table
-
+    - Select # of people, time and smoking options
     ![](/screenshots/reservation.gif)
+    
+    
 - Register/Login
+    - Register an account to manage your profile
 - Contact Us
+    - Check address and contact info
 - About Us
+    - Read our history and meet the chefs group
