@@ -42,7 +42,10 @@ yarn install
     
     ![](/screenshots/Favorite.gif)
     ![](/screenshots/comment.gif)
+    ![](/screenshots/writecomment.gif)
 - Reserve a table
+
+![](/screenshots/reservation.gif)
 - Register/Login
 - Contact Us
 - About Us
