@@ -30,3 +30,8 @@ yarn install
 ## 🗺 Features
 
 - Menus
+- Dish detail
+    - Ingredents
+    - Comments
+    - Write an comments
+    - Add favorite and Share on media
