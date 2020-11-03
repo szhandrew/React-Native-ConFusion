@@ -31,7 +31,7 @@ yarn install
 
 - Menus
 <img src="/screenshots/menu.png" width="320" height="640">
-
+<img src="/screenshots/dishDetail" width="320" height="640">
 
 - Dish detail
     - Ingredents
@@ -39,8 +39,9 @@ yarn install
     - Write an comments
     - Add favorite and Share on social media
     - Gesture support
-    <img src="/screenshots/menu.png" width="320" height="640">
-    <img src="/screenshots/menu.png" width="320" height="640">
+    
+    ![](/screenshots/Favorite.gif)
+    ![](/screenshots/comment.gif)
 - Reserve a table
 - Register/Login
 - Contact Us
